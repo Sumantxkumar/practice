@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice/layout.dart';
+import 'package:practice/whatsapp_screen.dart';
 
 import 'row_practice.dart';
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        home: RowPractice());
+        home: Layout());
   }
 }
 
