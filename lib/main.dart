@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practice/layout.dart';
-import 'package:practice/list_screen.dart';
-import 'package:practice/whatsapp_screen.dart';
+import 'package:practice/DIALOG/diolog_screen.dart';
 
+import 'layout.dart';
 import 'row_practice.dart';
 
 void main() {
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        home: ListScreen());
+        home: const DialogScreen());
   }
 }
 

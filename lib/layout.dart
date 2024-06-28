@@ -17,21 +17,24 @@ class _LayoutState extends State<Layout> {
           foregroundColor: Colors.red,
           backgroundColor: Colors.blueAccent,
         ),
-        body: Column(children: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Text('Discover the best product!'),
-            Image.network('https://picsum.photos/250?image=9'),
-          ]),
-          TextField(
-            controller: controller,
-            decoration: const InputDecoration(
-              hintText: 'Search',
-              prefixIcon: Icon(Icons.search),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              const Text('Discover the best product!'),
+              Image.network('https://picsum.photos/250?image=9'),
+            ]),
+            TextField(
+              controller: controller,
+              decoration: const InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                ),
               ),
             ),
-          ),
-        ]));
+          ]),
+        ));
   }
 }

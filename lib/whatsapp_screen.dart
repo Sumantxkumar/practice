@@ -9,6 +9,8 @@ class WhatsappScreen extends StatefulWidget {
 }
 
 class _WhatsappScreenState extends State<WhatsappScreen> {
+  var _counter = 1;
+
   var controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,11 @@ class _WhatsappScreenState extends State<WhatsappScreen> {
       ),
       body: Column(children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.network('https://picsum.photos/250?image=9'),
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('NAME'),
                 Text('Whatsapp screen is shown here'),
@@ -45,8 +49,13 @@ class _WhatsappScreenState extends State<WhatsappScreen> {
         )
       ]),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          _counter++;
+          setState(() {});
+        },
         child: Icon(Icons.ac_unit_sharp),
+
+         return Text("position $Text ");
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
