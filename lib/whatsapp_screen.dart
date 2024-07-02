@@ -15,49 +15,46 @@ class _WhatsappScreenState extends State<WhatsappScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        title: Text('whatsapp'),
-      ),
-      body: Column(children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.network('https://picsum.photos/250?image=9'),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('NAME'),
-                Text('Whatsapp screen is shown here'),
-              ],
-            )
-          ],
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          centerTitle: true,
+          title: Text('whatsapp'),
         ),
-        FloatingActionButton.large(
-          onPressed: () {
-            print(" ${controller.text}");
-          },
-          child: const Icon(Icons.play_arrow_sharp),
-        ),
-        const SizedBox(height: 20),
-        Text('BUTTON'),
-        TextField(
-          controller: controller,
-          decoration: InputDecoration(
-              helperText: "Test", focusedBorder: OutlineInputBorder()),
-        )
-      ]),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _counter++;
-          setState(() {});
-        },
-        child: Icon(Icons.ac_unit_sharp),
-
-         return Text("position $Text ");
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-    );
+        body: Column(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.network('https://picsum.photos/250?image=9'),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('NAME'),
+                  Text('Whatsapp screen is shown here'),
+                ],
+              )
+            ],
+          ),
+          FloatingActionButton.large(
+            onPressed: () {
+              print(" ${controller.text}");
+            },
+            child: const Icon(Icons.play_arrow_sharp),
+          ),
+          const SizedBox(height: 20),
+          Text('BUTTON'),
+          TextField(
+            controller: controller,
+            decoration: InputDecoration(
+                helperText: "Test", focusedBorder: OutlineInputBorder()),
+          )
+        ]),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              _counter++;
+              setState(() {});
+            },
+            child: Icon(Icons.ac_unit_sharp),
+            heroTag: Text("$_counter ")));
+    //floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
   }
 }
